@@ -1,0 +1,10 @@
+# www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Host
+Host: https://emted.com.tr
+
+# Sitemaps
+Sitemap: https://emted.com.tr/sitemap.xml

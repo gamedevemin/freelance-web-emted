@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "cart": "Sepet",
+    "getQuote": "Teklif Al",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat"
+  },
+  "home": {
+    "title": "Emted Tedarik - Kurumsal Temizlik ve Hijyen Çözümleri",
+    "description": "15 yıllık tecrübemizle kurumsal müşterilerimize en kaliteli temizlik ve hijyen ürünlerini sunuyoruz. Aynı gün teslimat ve rekabetçi fiyatlarla hizmetinizdeyiz.",
+    "hero": {
+      "title": "İşletmeniz için En İyi Tedarik Çözümleri",
+      "description": "Temizlik malzemeleri ve tek kullanımlık ürünlerde güvenilir tedarikçiniz. Kaliteli ürünler, uygun fiyatlar ve hızlı teslimat.",
+      "cta": {
+        "explore": "Ürünleri Keşfet",
+        "quote": "Özel Teklif Al"
+      }
+    },
+    "categories": {
+      "title": "Ürün Kategorilerimiz",
+      "subtitle": "İhtiyacınıza uygun ürünleri keşfedin"
+    },
+    "brands": {
+      "title": "ÇALIŞTIĞIMIZ MARKALAR"
+    },
+    "cta": {
+      "title": "Toplu Siparişleriniz için",
+      "subtitle": "Size özel fiyat teklifimizi alın",
+      "button": "Teklif Al"
+    }
+  },
+  "features": {
+    "title": "Neden Biz?",
+    "subtitle": "İşletmeniz için En İyi Çözümler",
+    "delivery": "Hızlı Teslimat",
+    "deliveryDesc": "Siparişleriniz aynı gün içinde hazırlanır ve en kısa sürede teslim edilir.",
+    "quality": "Kalite Garantisi",
+    "qualityDesc": "Tüm ürünlerimiz kalite standartlarına uygun ve garantilidir.",
+    "price": "Uygun Fiyatlar",
+    "priceDesc": "Toptan fiyatlarla kaliteli ürünler sunuyoruz.",
+    "support": "7/24 Destek",
+    "supportDesc": "Müşteri hizmetlerimiz her zaman yanınızda."
+  },
+  "categories": {
+    "title": "Kategoriler",
+    "subtitle": "İhtiyacınıza Uygun Ürünler",
+    "cleaning": "Temizlik Malzemeleri",
+    "disposable": "Tek Kullanımlık Ürünler",
+    "eco": "Çevre Dostu Ürünler"
+  },
+  "products": {
+    "title": "Ürünlerimiz",
+    "description": "Kaliteli ve uygun fiyatlı ürün çeşitlerimizi keşfedin.",
+    "featured": "Öne Çıkan Ürünler",
+    "featuredSubtitle": "En Çok Tercih Edilen Ürünlerimiz",
+    "viewAll": "Tüm Ürünleri Gör",
+    "searchPlaceholder": "Ürün ara...",
+    "categories": "Kategoriler",
+    "inStock": "{{count}} adet stokta",
+    "outOfStock": "Stokta yok",
+    "addToCart": "Sepete Ekle",
+    "actions": {
+      "compare": "Karşılaştır",
+      "favorite": "Favorilere Ekle",
+      "bulkOrder": "Toplu Sipariş"
+    },
+    "noResults": "Ürün bulunamadı",
+    "tryDifferent": "Farklı bir arama yapmayı deneyin"
+  },
+  "filter": {
+    "allCategories": "Tüm Kategoriler",
+    "price": "Fiyat",
+    "stock": "Stok Durumu",
+    "category": "Kategori",
+    "sort": {
+      "title": "Sırala",
+      "priceAsc": "Fiyat (Düşükten Yükseğe)",
+      "priceDesc": "Fiyat (Yüksekten Düşüğe)",
+      "nameAsc": "İsim (A-Z)",
+      "nameDesc": "İsim (Z-A)"
+    }
+  },
+  "search": {
+    "placeholder": "Ürün veya kategori ara..."
+  },
+  "footer": {
+    "companyDescription": "Emted Tedarik, işletmeniz için ihtiyacınız olan tüm temizlik malzemeleri ve tek kullanımlık ürünleri en uygun fiyatlarla sunar.",
+    "company": "Kurumsal",
+    "products": "Ürünler",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "quickLinks": "Hızlı Bağlantılar",
+    "categories": "Kategoriler",
+    "address": "İstanbul, Türkiye",
+    "rights": "Tüm hakları saklıdır."
+  }
+}

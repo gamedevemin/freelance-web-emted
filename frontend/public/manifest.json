@@ -1,0 +1,63 @@
+{
+  "name": "Emted Tedarik",
+  "short_name": "Emted",
+  "description": "Kurumsal Temizlik ve Hijyen Çözümleri",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ürünleri Görüntüle",
+      "short_name": "Ürünler",
+      "description": "Tüm ürünleri görüntüle",
+      "url": "/products",
+      "icons": [{ "src": "/icons/products.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Sepetim",
+      "short_name": "Sepet",
+      "description": "Sepetimi görüntüle",
+      "url": "/cart",
+      "icons": [{ "src": "/icons/cart.png", "sizes": "192x192" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "categories": ["shopping", "business"],
+  "screenshots": [
+    {
+      "src": "/screenshots/home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Ana Sayfa"
+    },
+    {
+      "src": "/screenshots/products.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Ürünler Sayfası"
+    }
+  ]
+}
