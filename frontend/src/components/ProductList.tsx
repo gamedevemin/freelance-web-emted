@@ -1,15 +1,7 @@
+import { memo } from 'react';
 import { useTranslation } from 'next-i18next';
 import ProductCard from './ProductCard';
-
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  imageUrl: string;
-  category: string;
-  stock: number;
-}
+import type { Product } from '../types/product';
 
 interface ProductListProps {
   products: Product[];
@@ -17,7 +9,11 @@ interface ProductListProps {
   error?: string;
 }
 
-export default function ProductList({ products, isLoading, error }: ProductListProps) {
+const ProductList = memo(function ProductList({ 
+  products, 
+  isLoading, 
+  error 
+}: ProductListProps) {
   const { t } = useTranslation('common');
 
   if (isLoading) {
@@ -36,7 +32,12 @@ export default function ProductList({ products, isLoading, error }: ProductListP
   if (error) {
     return (
       <div className="text-center py-12">
-        <p className="text-red-600">{error}</p>
+        <div className="inline-flex items-center px-4 py-2 rounded-md bg-red-50 text-red-600">
+          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>{error}</span>
+        </div>
       </div>
     );
   }
@@ -44,7 +45,8 @@ export default function ProductList({ products, isLoading, error }: ProductListP
   if (!products?.length) {
     return (
       <div className="text-center py-12">
-        <p className="text-gray-500">{t('product.noProducts')}</p>
+        <p className="text-gray-500">{t('product.noResults')}</p>
+        <p className="text-sm text-gray-400 mt-2">{t('product.tryDifferent')}</p>
       </div>
     );
   }
@@ -59,4 +61,8 @@ export default function ProductList({ products, isLoading, error }: ProductListP
       ))}
     </div>
   );
-}
+});
+
+ProductList.displayName = 'ProductList';
+
+export default ProductList;

@@ -3,19 +3,27 @@ export interface Product {
   name: string;
   description: string;
   price: number;
-  image_url: string;
+  image: string;
   category: string;
   stock: number;
-  discount: number;
-  featured: boolean;
-  specifications?: {
-    [key: string]: string | number;
+  minOrder: number;
+  technicalSpecs?: {
+    [key: string]: string;
   };
-  related_products?: string[];
-  min_order_quantity?: number;
-  bulk_pricing?: {
-    quantity: number;
-    price: number;
-  }[];
-  tags?: string[];
 }
+
+export interface Category {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  icon?: string;
+}
+
+export interface ProductListProps {
+  products: Product[];
+  isLoading?: boolean;
+  error?: string;
+}
+
+export interface ProductCardProps extends Product {}

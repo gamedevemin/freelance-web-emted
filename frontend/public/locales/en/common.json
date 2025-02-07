@@ -56,7 +56,7 @@
     "categories": "Categories",
     "inStock": "{{count}} in stock",
     "outOfStock": "Out of stock",
-    "addToCart": "Add to Cart",
+    "addToCart": "Details",
     "noResults": "No products found",
     "tryDifferent": "Try a different search"
   },
@@ -67,7 +67,7 @@
     "category": "Category"
   },
   "search": {
-    "placeholder": "Search products or categories..."
+    "placeholder": "Search products..."
   },
   "footer": {
     "companyDescription": "Emted Tedarik offers all the cleaning supplies and disposable products your business needs at the most affordable prices.",
@@ -80,5 +80,26 @@
     "quickLinks": "Quick Links",
     "address": "Istanbul, Turkey",
     "rights": "All rights reserved."
+  },
+  "common": {
+    "sameDay": "Same Day Delivery",
+    "getQuote": "Get Quote"
+  },
+  "product": {
+    "viewDetails": "Details",
+    "viewImage": "View Full Image",
+    "inStock": "in stock",
+    "outOfStock": "Out of Stock",
+    "minOrder": "Minimum order: {{count}} units",
+    "description": "Product Description",
+    "specifications": "Technical Specifications",
+    "contactViaWhatsapp": "Contact via WhatsApp",
+    "getQuote": "Get Quote"
+  },
+  "modal": {
+    "close": "Close",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "resetZoom": "Reset Zoom"
   }
 }

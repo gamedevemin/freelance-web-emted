@@ -62,7 +62,7 @@
     "categories": "Kategoriler",
     "inStock": "{{count}} adet stokta",
     "outOfStock": "Stokta yok",
-    "addToCart": "Sepete Ekle",
+    "addToCart": "Detaylar",
     "actions": {
       "compare": "Karşılaştır",
       "favorite": "Favorilere Ekle",
@@ -85,7 +85,28 @@
     }
   },
   "search": {
-    "placeholder": "Ürün veya kategori ara..."
+    "placeholder": "Ürün ara..."
+  },
+  "common": {
+    "sameDay": "Aynı Gün Teslimat",
+    "getQuote": "Teklif Al"
+  },
+  "product": {
+    "viewDetails": "Detaylar",
+    "viewImage": "Görseli Büyüt",
+    "inStock": "adet stokta",
+    "outOfStock": "Stokta Yok",
+    "minOrder": "Minimum sipariş: {{count}} adet",
+    "description": "Ürün Açıklaması",
+    "specifications": "Teknik Özellikler",
+    "contactViaWhatsapp": "WhatsApp ile İletişim",
+    "getQuote": "Teklif Al"
+  },
+  "modal": {
+    "close": "Kapat",
+    "zoomIn": "Yakınlaştır",
+    "zoomOut": "Uzaklaştır",
+    "resetZoom": "Yakınlaştırmayı Sıfırla"
   },
   "footer": {
     "companyDescription": "Emted Tedarik, işletmeniz için ihtiyacınız olan tüm temizlik malzemeleri ve tek kullanımlık ürünleri en uygun fiyatlarla sunar.",

@@ -9,10 +9,14 @@ interface SearchBarProps {
   className?: string;
 }
 
-export default function SearchBar({ onSearch, placeholder, className = '' }: SearchBarProps) {
+export default function SearchBar({
+  onSearch,
+  placeholder,
+  className = '',
+}: SearchBarProps) {
   const { t } = useTranslation('common');
   const [searchTerm, setSearchTerm] = useState('');
-  const debouncedSearchTerm = useDebounce(searchTerm, 500);
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
 
   useEffect(() => {
     onSearch(debouncedSearchTerm);
@@ -20,16 +24,21 @@ export default function SearchBar({ onSearch, placeholder, className = '' }: Sea
 
   return (
     <div className={`relative ${className}`}>
-      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-        <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+      <div className="relative">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-full pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder={placeholder || t('search.placeholder')}
+        />
+        <div className="absolute inset-y-0 right-0 flex items-center pr-3">
+          <MagnifyingGlassIcon
+            className="h-5 w-5 text-gray-400"
+            aria-hidden="true"
+          />
+        </div>
       </div>
-      <input
-        type="text"
-        className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-        placeholder={placeholder || t('search.placeholder')}
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
     </div>
   );
 }

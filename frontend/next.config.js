@@ -1,21 +1,19 @@
 const { i18n } = require('./next-i18next.config');
-const withPWA = require('next-pwa')({
-  dest: 'public',
-  disable: process.env.NODE_ENV === 'development',
-  register: true,
-  skipWaiting: true,
-});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  i18n,
+  i18n: {
+    defaultLocale: 'tr',
+    locales: ['tr', 'en'],
+  },
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
-    domains: ['placehold.co'],
-    formats: ['image/webp'],
+    domains: ['localhost', 'emted.com.tr', 'placehold.co'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    formats: ['image/webp'],
+    minimumCacheTTL: 60,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
@@ -23,6 +21,8 @@ const nextConfig = {
   experimental: {
     serverActions: true,
     serverComponentsExternalPackages: ['sharp'],
+    optimizeCss: false,
+    scrollRestoration: true,
   },
   webpack: (config, { dev, isServer }) => {
     // SVG optimization
@@ -31,7 +31,7 @@ const nextConfig = {
       use: ['@svgr/webpack'],
     });
 
-    // Enable tree shaking and purging
+    // Bundle size optimizations
     if (!dev && !isServer) {
       config.optimization = {
         ...config.optimization,
@@ -39,6 +39,26 @@ const nextConfig = {
         removeAvailableModules: true,
         removeEmptyChunks: true,
         minimize: true,
+        splitChunks: {
+          chunks: 'all',
+          minSize: 20000,
+          maxSize: 244000,
+          minChunks: 1,
+          maxAsyncRequests: 30,
+          maxInitialRequests: 30,
+          cacheGroups: {
+            defaultVendors: {
+              test: /[\\/]node_modules[\\/]/,
+              priority: -10,
+              reuseExistingChunk: true,
+            },
+            default: {
+              minChunks: 2,
+              priority: -20,
+              reuseExistingChunk: true,
+            },
+          },
+        },
       };
     }
 
@@ -97,5 +117,12 @@ const nextConfig = {
     ];
   },
 };
+
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  disable: process.env.NODE_ENV === 'development',
+  register: true,
+  skipWaiting: true,
+});
 
 module.exports = withPWA(nextConfig);
